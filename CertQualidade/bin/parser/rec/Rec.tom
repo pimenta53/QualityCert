@@ -1,0 +1,887 @@
+
+%include { string.tom }
+
+%include { int.tom }
+
+%typeterm LValue {
+  implement { parser.rec.types.LValue }
+  is_sort(t) { ($t instanceof parser.rec.types.LValue) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm VarDec {
+  implement { parser.rec.types.VarDec }
+  is_sort(t) { ($t instanceof parser.rec.types.VarDec) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Term {
+  implement { parser.rec.types.Term }
+  is_sort(t) { ($t instanceof parser.rec.types.Term) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Exp {
+  implement { parser.rec.types.Exp }
+  is_sort(t) { ($t instanceof parser.rec.types.Exp) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ArgList {
+  implement { parser.rec.types.ArgList }
+  is_sort(t) { ($t instanceof parser.rec.types.ArgList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AuxFieldList {
+  implement { parser.rec.types.AuxFieldList }
+  is_sort(t) { ($t instanceof parser.rec.types.AuxFieldList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm FunDec {
+  implement { parser.rec.types.FunDec }
+  is_sort(t) { ($t instanceof parser.rec.types.FunDec) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Aux1 {
+  implement { parser.rec.types.Aux1 }
+  is_sort(t) { ($t instanceof parser.rec.types.Aux1) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm IntFieldList {
+  implement { parser.rec.types.IntFieldList }
+  is_sort(t) { ($t instanceof parser.rec.types.IntFieldList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ExpANDPr {
+  implement { parser.rec.types.ExpANDPr }
+  is_sort(t) { ($t instanceof parser.rec.types.ExpANDPr) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm FactorPr {
+  implement { parser.rec.types.FactorPr }
+  is_sort(t) { ($t instanceof parser.rec.types.FactorPr) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm DecList {
+  implement { parser.rec.types.DecList }
+  is_sort(t) { ($t instanceof parser.rec.types.DecList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Aux4 {
+  implement { parser.rec.types.Aux4 }
+  is_sort(t) { ($t instanceof parser.rec.types.Aux4) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm TermPr {
+  implement { parser.rec.types.TermPr }
+  is_sort(t) { ($t instanceof parser.rec.types.TermPr) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ExpAND {
+  implement { parser.rec.types.ExpAND }
+  is_sort(t) { ($t instanceof parser.rec.types.ExpAND) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm FieldList {
+  implement { parser.rec.types.FieldList }
+  is_sort(t) { ($t instanceof parser.rec.types.FieldList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ExpORPr {
+  implement { parser.rec.types.ExpORPr }
+  is_sort(t) { ($t instanceof parser.rec.types.ExpORPr) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AuxFRA2 {
+  implement { parser.rec.types.AuxFRA2 }
+  is_sort(t) { ($t instanceof parser.rec.types.AuxFRA2) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ExpOR {
+  implement { parser.rec.types.ExpOR }
+  is_sort(t) { ($t instanceof parser.rec.types.ExpOR) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AuxFRA1 {
+  implement { parser.rec.types.AuxFRA1 }
+  is_sort(t) { ($t instanceof parser.rec.types.AuxFRA1) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AritExp {
+  implement { parser.rec.types.AritExp }
+  is_sort(t) { ($t instanceof parser.rec.types.AritExp) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Aux2 {
+  implement { parser.rec.types.Aux2 }
+  is_sort(t) { ($t instanceof parser.rec.types.Aux2) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Prog {
+  implement { parser.rec.types.Prog }
+  is_sort(t) { ($t instanceof parser.rec.types.Prog) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm ExpList {
+  implement { parser.rec.types.ExpList }
+  is_sort(t) { ($t instanceof parser.rec.types.ExpList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm TyDec {
+  implement { parser.rec.types.TyDec }
+  is_sort(t) { ($t instanceof parser.rec.types.TyDec) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Aux3 {
+  implement { parser.rec.types.Aux3 }
+  is_sort(t) { ($t instanceof parser.rec.types.Aux3) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Factor {
+  implement { parser.rec.types.Factor }
+  is_sort(t) { ($t instanceof parser.rec.types.Factor) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Ty {
+  implement { parser.rec.types.Ty }
+  is_sort(t) { ($t instanceof parser.rec.types.Ty) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm Dec {
+  implement { parser.rec.types.Dec }
+  is_sort(t) { ($t instanceof parser.rec.types.Dec) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm RelExp {
+  implement { parser.rec.types.RelExp }
+  is_sort(t) { ($t instanceof parser.rec.types.RelExp) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AuxExpList {
+  implement { parser.rec.types.AuxExpList }
+  is_sort(t) { ($t instanceof parser.rec.types.AuxExpList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm TypeId {
+  implement { parser.rec.types.TypeId }
+  is_sort(t) { ($t instanceof parser.rec.types.TypeId) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm FunctionRecordArray {
+  implement { parser.rec.types.FunctionRecordArray }
+  is_sort(t) { ($t instanceof parser.rec.types.FunctionRecordArray) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+
+%typeterm AuxArgList {
+  implement { parser.rec.types.AuxArgList }
+  is_sort(t) { ($t instanceof parser.rec.types.AuxArgList) }
+
+  equals(t1,t2) { ($t1==$t2) }
+
+}
+%op LValue LValue(id:String, fra:FunctionRecordArray) {
+  is_fsym(t) { ($t instanceof parser.rec.types.lvalue.LValue) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(fra, t) { $t.getfra() }
+  make(t0, t1) { parser.rec.types.lvalue.LValue.make($t0, $t1) }
+}
+
+%op VarDec VarDec1(id:String, a:Aux2) {
+  is_fsym(t) { ($t instanceof parser.rec.types.vardec.VarDec1) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1) { parser.rec.types.vardec.VarDec1.make($t0, $t1) }
+}
+
+%op VarDec VarDec2(id:String, ti:TypeId, a:Aux2) {
+  is_fsym(t) { ($t instanceof parser.rec.types.vardec.VarDec2) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(ti, t) { $t.getti() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1, t2) { parser.rec.types.vardec.VarDec2.make($t0, $t1, $t2) }
+}
+
+%op Term Term(f:Factor, fp:FactorPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.term.Term) }
+  get_slot(f, t) { $t.getf() }
+  get_slot(fp, t) { $t.getfp() }
+  make(t0, t1) { parser.rec.types.term.Term.make($t0, $t1) }
+}
+
+%op Exp Exp(eop:ExpOR, eorp:ExpORPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.exp.Exp) }
+  get_slot(eop, t) { $t.geteop() }
+  get_slot(eorp, t) { $t.geteorp() }
+  make(t0, t1) { parser.rec.types.exp.Exp.make($t0, $t1) }
+}
+
+%op ArgList ArgList(e1:Exp, a:AuxArgList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.arglist.ArgList) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1) { parser.rec.types.arglist.ArgList.make($t0, $t1) }
+}
+
+%op ArgList ArgListEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.arglist.ArgListEmpty) }
+  make() { parser.rec.types.arglist.ArgListEmpty.make() }
+}
+
+%op AuxFieldList EmptyAuxFieldList() {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfieldlist.EmptyAuxFieldList) }
+  make() { parser.rec.types.auxfieldlist.EmptyAuxFieldList.make() }
+}
+
+%op AuxFieldList ConsAuxFieldList(HeadAuxFieldList:IntFieldList, TailAuxFieldList:AuxFieldList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfieldlist.ConsAuxFieldList) }
+  get_slot(HeadAuxFieldList, t) { $t.getHeadAuxFieldList() }
+  get_slot(TailAuxFieldList, t) { $t.getTailAuxFieldList() }
+  make(t0, t1) { parser.rec.types.auxfieldlist.ConsAuxFieldList.make($t0, $t1) }
+}
+
+%op FunDec FunDec1(id:String, fl:FieldList, e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.fundec.FunDec1) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(fl, t) { $t.getfl() }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0, t1, t2) { parser.rec.types.fundec.FunDec1.make($t0, $t1, $t2) }
+}
+
+%op FunDec FunDec2(id:String, fl:FieldList, ti:TypeId, e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.fundec.FunDec2) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(fl, t) { $t.getfl() }
+  get_slot(ti, t) { $t.getti() }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0, t1, t2, t3) { parser.rec.types.fundec.FunDec2.make($t0, $t1, $t2, $t3) }
+}
+
+%op Aux1 Aux11(ti:TypeId) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux1.Aux11) }
+  get_slot(ti, t) { $t.getti() }
+  make(t0) { parser.rec.types.aux1.Aux11.make($t0) }
+}
+
+%op Aux1 Aux12(ti:TypeId) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux1.Aux12) }
+  get_slot(ti, t) { $t.getti() }
+  make(t0) { parser.rec.types.aux1.Aux12.make($t0) }
+}
+
+%op IntFieldList IntFieldList1(id:String, a:Aux1) {
+  is_fsym(t) { ($t instanceof parser.rec.types.intfieldlist.IntFieldList1) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1) { parser.rec.types.intfieldlist.IntFieldList1.make($t0, $t1) }
+}
+
+%op IntFieldList IntFieldList2(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.intfieldlist.IntFieldList2) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.intfieldlist.IntFieldList2.make($t0) }
+}
+
+%op IntFieldList IntFieldList3(e1:Exp, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.intfieldlist.IntFieldList3) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1) { parser.rec.types.intfieldlist.IntFieldList3.make($t0, $t1) }
+}
+
+%op ExpANDPr ExpANDPr(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.expandpr.ExpANDPr) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.expandpr.ExpANDPr.make($t0) }
+}
+
+%op ExpANDPr ExpANDPrEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.expandpr.ExpANDPrEmpty) }
+  make() { parser.rec.types.expandpr.ExpANDPrEmpty.make() }
+}
+
+%op FactorPr Times(f:Factor, fp:FactorPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factorpr.Times) }
+  get_slot(f, t) { $t.getf() }
+  get_slot(fp, t) { $t.getfp() }
+  make(t0, t1) { parser.rec.types.factorpr.Times.make($t0, $t1) }
+}
+
+%op FactorPr Div(f:Factor, fp:FactorPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factorpr.Div) }
+  get_slot(f, t) { $t.getf() }
+  get_slot(fp, t) { $t.getfp() }
+  make(t0, t1) { parser.rec.types.factorpr.Div.make($t0, $t1) }
+}
+
+%op FactorPr FactorPrEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.factorpr.FactorPrEmpty) }
+  make() { parser.rec.types.factorpr.FactorPrEmpty.make() }
+}
+
+%op DecList EmptyDecList() {
+  is_fsym(t) { ($t instanceof parser.rec.types.declist.EmptyDecList) }
+  make() { parser.rec.types.declist.EmptyDecList.make() }
+}
+
+%op DecList ConsDecList(HeadDecList:Dec, TailDecList:DecList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.declist.ConsDecList) }
+  get_slot(HeadDecList, t) { $t.getHeadDecList() }
+  get_slot(TailDecList, t) { $t.getTailDecList() }
+  make(t0, t1) { parser.rec.types.declist.ConsDecList.make($t0, $t1) }
+}
+
+%op Aux4 EmptyAux4() {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux4.EmptyAux4) }
+  make() { parser.rec.types.aux4.EmptyAux4.make() }
+}
+
+%op Aux4 ConsAux4(HeadAux4:Exp, TailAux4:Aux4) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux4.ConsAux4) }
+  get_slot(HeadAux4, t) { $t.getHeadAux4() }
+  get_slot(TailAux4, t) { $t.getTailAux4() }
+  make(t0, t1) { parser.rec.types.aux4.ConsAux4.make($t0, $t1) }
+}
+
+%op TermPr TermPrPlus(t:Term, tp:TermPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.termpr.TermPrPlus) }
+  get_slot(t, t) { $t.gett() }
+  get_slot(tp, t) { $t.gettp() }
+  make(t0, t1) { parser.rec.types.termpr.TermPrPlus.make($t0, $t1) }
+}
+
+%op TermPr TermPrNeg(t:Term, tp:TermPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.termpr.TermPrNeg) }
+  get_slot(t, t) { $t.gett() }
+  get_slot(tp, t) { $t.gettp() }
+  make(t0, t1) { parser.rec.types.termpr.TermPrNeg.make($t0, $t1) }
+}
+
+%op TermPr TermPrEqual(t:Term, tp:TermPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.termpr.TermPrEqual) }
+  get_slot(t, t) { $t.gett() }
+  get_slot(tp, t) { $t.gettp() }
+  make(t0, t1) { parser.rec.types.termpr.TermPrEqual.make($t0, $t1) }
+}
+
+%op TermPr TermPrEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.termpr.TermPrEmpty) }
+  make() { parser.rec.types.termpr.TermPrEmpty.make() }
+}
+
+%op ExpAND ExpAND(ae:AritExp, re:RelExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.expand.ExpAND) }
+  get_slot(ae, t) { $t.getae() }
+  get_slot(re, t) { $t.getre() }
+  make(t0, t1) { parser.rec.types.expand.ExpAND.make($t0, $t1) }
+}
+
+%op FieldList FieldListDP(d:String, ti:TypeId, a:AuxFieldList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.fieldlist.FieldListDP) }
+  get_slot(d, t) { $t.getd() }
+  get_slot(ti, t) { $t.getti() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1, t2) { parser.rec.types.fieldlist.FieldListDP.make($t0, $t1, $t2) }
+}
+
+%op FieldList FieldListEqual(id:String, ti:TypeId, a:AuxFieldList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.fieldlist.FieldListEqual) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(ti, t) { $t.getti() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1, t2) { parser.rec.types.fieldlist.FieldListEqual.make($t0, $t1, $t2) }
+}
+
+%op FieldList FieldListEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.fieldlist.FieldListEmpty) }
+  make() { parser.rec.types.fieldlist.FieldListEmpty.make() }
+}
+
+%op ExpORPr ExpORPr(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.exporpr.ExpORPr) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.exporpr.ExpORPr.make($t0) }
+}
+
+%op ExpORPr ExpORPrEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.exporpr.ExpORPrEmpty) }
+  make() { parser.rec.types.exporpr.ExpORPrEmpty.make() }
+}
+
+%op AuxFRA2 AuxFRA21(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfra2.AuxFRA21) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.auxfra2.AuxFRA21.make($t0) }
+}
+
+%op AuxFRA2 AuxFRA22(a3:Aux3, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfra2.AuxFRA22) }
+  get_slot(a3, t) { $t.geta3() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1) { parser.rec.types.auxfra2.AuxFRA22.make($t0, $t1) }
+}
+
+%op AuxFRA2 AuxFRA23(a3:Aux3, a4:Aux4, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfra2.AuxFRA23) }
+  get_slot(a3, t) { $t.geta3() }
+  get_slot(a4, t) { $t.geta4() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1, t2) { parser.rec.types.auxfra2.AuxFRA23.make($t0, $t1, $t2) }
+}
+
+%op AuxFRA2 AuxFRA24(a4:Aux4, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfra2.AuxFRA24) }
+  get_slot(a4, t) { $t.geta4() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1) { parser.rec.types.auxfra2.AuxFRA24.make($t0, $t1) }
+}
+
+%op ExpOR ExpOR(ea:ExpAND, eap:ExpANDPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.expor.ExpOR) }
+  get_slot(ea, t) { $t.getea() }
+  get_slot(eap, t) { $t.geteap() }
+  make(t0, t1) { parser.rec.types.expor.ExpOR.make($t0, $t1) }
+}
+
+%op AuxFRA1 AuxFRA1(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxfra1.AuxFRA1) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.auxfra1.AuxFRA1.make($t0) }
+}
+
+%op AritExp AritExp(t:Term, tp:TermPr) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aritexp.AritExp) }
+  get_slot(t, t) { $t.gett() }
+  get_slot(tp, t) { $t.gettp() }
+  make(t0, t1) { parser.rec.types.aritexp.AritExp.make($t0, $t1) }
+}
+
+%op Aux2 Aux21(e:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux2.Aux21) }
+  get_slot(e, t) { $t.gete() }
+  make(t0) { parser.rec.types.aux2.Aux21.make($t0) }
+}
+
+%op Aux2 Aux22(e:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux2.Aux22) }
+  get_slot(e, t) { $t.gete() }
+  make(t0) { parser.rec.types.aux2.Aux22.make($t0) }
+}
+
+%op Prog Prog(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.prog.Prog) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.prog.Prog.make($t0) }
+}
+
+%op ExpList ExpList(e1:Exp, a:AuxExpList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.explist.ExpList) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(a, t) { $t.geta() }
+  make(t0, t1) { parser.rec.types.explist.ExpList.make($t0, $t1) }
+}
+
+%op ExpList ExpListEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.explist.ExpListEmpty) }
+  make() { parser.rec.types.explist.ExpListEmpty.make() }
+}
+
+%op TyDec TyDec(ti:TypeId, t:Ty) {
+  is_fsym(t) { ($t instanceof parser.rec.types.tydec.TyDec) }
+  get_slot(ti, t) { $t.getti() }
+  get_slot(t, t) { $t.gett() }
+  make(t0, t1) { parser.rec.types.tydec.TyDec.make($t0, $t1) }
+}
+
+%op Aux3 EmptyAux3() {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux3.EmptyAux3) }
+  make() { parser.rec.types.aux3.EmptyAux3.make() }
+}
+
+%op Aux3 ConsAux3(HeadAux3:String, TailAux3:Aux3) {
+  is_fsym(t) { ($t instanceof parser.rec.types.aux3.ConsAux3) }
+  get_slot(HeadAux3, t) { $t.getHeadAux3() }
+  get_slot(TailAux3, t) { $t.getTailAux3() }
+  make(t0, t1) { parser.rec.types.aux3.ConsAux3.make($t0, $t1) }
+}
+
+%op Factor FNil() {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FNil) }
+  make() { parser.rec.types.factor.FNil.make() }
+}
+
+%op Factor FInteger(i:int) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FInteger) }
+  get_slot(i, t) { $t.geti() }
+  make(t0) { parser.rec.types.factor.FInteger.make($t0) }
+}
+
+%op Factor FString(s:String) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FString) }
+  get_slot(s, t) { $t.gets() }
+  make(t0) { parser.rec.types.factor.FString.make($t0) }
+}
+
+%op Factor FExpList(el:ExpList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FExpList) }
+  get_slot(el, t) { $t.getel() }
+  make(t0) { parser.rec.types.factor.FExpList.make($t0) }
+}
+
+%op Factor FNeg(e1:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FNeg) }
+  get_slot(e1, t) { $t.gete1() }
+  make(t0) { parser.rec.types.factor.FNeg.make($t0) }
+}
+
+%op Factor FWhile(e1:Exp, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FWhile) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1) { parser.rec.types.factor.FWhile.make($t0, $t1) }
+}
+
+%op Factor FFor(id:String, e1:Exp, e2:Exp, e3:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FFor) }
+  get_slot(id, t) { $t.getid() }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(e2, t) { $t.gete2() }
+  get_slot(e3, t) { $t.gete3() }
+  make(t0, t1, t2, t3) { parser.rec.types.factor.FFor.make($t0, $t1, $t2, $t3) }
+}
+
+%op Factor FBreak() {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FBreak) }
+  make() { parser.rec.types.factor.FBreak.make() }
+}
+
+%op Factor FLet(dl:DecList, el:ExpList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FLet) }
+  get_slot(dl, t) { $t.getdl() }
+  get_slot(el, t) { $t.getel() }
+  make(t0, t1) { parser.rec.types.factor.FLet.make($t0, $t1) }
+}
+
+%op Factor FLvalue(lv:LValue) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FLvalue) }
+  get_slot(lv, t) { $t.getlv() }
+  make(t0) { parser.rec.types.factor.FLvalue.make($t0) }
+}
+
+%op Factor FIfThen(e1:Exp, e2:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FIfThen) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(e2, t) { $t.gete2() }
+  make(t0, t1) { parser.rec.types.factor.FIfThen.make($t0, $t1) }
+}
+
+%op Factor FIfThenElse(e1:Exp, e2:Exp, e3:Exp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.factor.FIfThenElse) }
+  get_slot(e1, t) { $t.gete1() }
+  get_slot(e2, t) { $t.gete2() }
+  get_slot(e3, t) { $t.gete3() }
+  make(t0, t1, t2) { parser.rec.types.factor.FIfThenElse.make($t0, $t1, $t2) }
+}
+
+%op Ty TFieldList(fl:FieldList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.ty.TFieldList) }
+  get_slot(fl, t) { $t.getfl() }
+  make(t0) { parser.rec.types.ty.TFieldList.make($t0) }
+}
+
+%op Ty TArrayOf(ti:TypeId) {
+  is_fsym(t) { ($t instanceof parser.rec.types.ty.TArrayOf) }
+  get_slot(ti, t) { $t.getti() }
+  make(t0) { parser.rec.types.ty.TArrayOf.make($t0) }
+}
+
+%op Ty TTypeId(ti:TypeId) {
+  is_fsym(t) { ($t instanceof parser.rec.types.ty.TTypeId) }
+  get_slot(ti, t) { $t.getti() }
+  make(t0) { parser.rec.types.ty.TTypeId.make($t0) }
+}
+
+%op Dec DTyDec(td:TyDec) {
+  is_fsym(t) { ($t instanceof parser.rec.types.dec.DTyDec) }
+  get_slot(td, t) { $t.gettd() }
+  make(t0) { parser.rec.types.dec.DTyDec.make($t0) }
+}
+
+%op Dec DVarDec(vd:VarDec) {
+  is_fsym(t) { ($t instanceof parser.rec.types.dec.DVarDec) }
+  get_slot(vd, t) { $t.getvd() }
+  make(t0) { parser.rec.types.dec.DVarDec.make($t0) }
+}
+
+%op Dec DFunDec(fd:FunDec) {
+  is_fsym(t) { ($t instanceof parser.rec.types.dec.DFunDec) }
+  get_slot(fd, t) { $t.getfd() }
+  make(t0) { parser.rec.types.dec.DFunDec.make($t0) }
+}
+
+%op RelExp RelExpLess(a1:AritExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpLess) }
+  get_slot(a1, t) { $t.geta1() }
+  make(t0) { parser.rec.types.relexp.RelExpLess.make($t0) }
+}
+
+%op RelExp RelExpMore(a2:AritExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpMore) }
+  get_slot(a2, t) { $t.geta2() }
+  make(t0) { parser.rec.types.relexp.RelExpMore.make($t0) }
+}
+
+%op RelExp RelExpDiferent(a3:AritExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpDiferent) }
+  get_slot(a3, t) { $t.geta3() }
+  make(t0) { parser.rec.types.relexp.RelExpDiferent.make($t0) }
+}
+
+%op RelExp RelExpLessEqual(a4:AritExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpLessEqual) }
+  get_slot(a4, t) { $t.geta4() }
+  make(t0) { parser.rec.types.relexp.RelExpLessEqual.make($t0) }
+}
+
+%op RelExp RelExpMoreEqual(a5:AritExp) {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpMoreEqual) }
+  get_slot(a5, t) { $t.geta5() }
+  make(t0) { parser.rec.types.relexp.RelExpMoreEqual.make($t0) }
+}
+
+%op RelExp RelExpEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.relexp.RelExpEmpty) }
+  make() { parser.rec.types.relexp.RelExpEmpty.make() }
+}
+
+%op AuxExpList EmptyAuxExpList() {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxexplist.EmptyAuxExpList) }
+  make() { parser.rec.types.auxexplist.EmptyAuxExpList.make() }
+}
+
+%op AuxExpList ConsAuxExpList(HeadAuxExpList:Exp, TailAuxExpList:AuxExpList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxexplist.ConsAuxExpList) }
+  get_slot(HeadAuxExpList, t) { $t.getHeadAuxExpList() }
+  get_slot(TailAuxExpList, t) { $t.getTailAuxExpList() }
+  make(t0, t1) { parser.rec.types.auxexplist.ConsAuxExpList.make($t0, $t1) }
+}
+
+%op TypeId TypeId(id:String) {
+  is_fsym(t) { ($t instanceof parser.rec.types.typeid.TypeId) }
+  get_slot(id, t) { $t.getid() }
+  make(t0) { parser.rec.types.typeid.TypeId.make($t0) }
+}
+
+%op TypeId TypeIdString(s:String) {
+  is_fsym(t) { ($t instanceof parser.rec.types.typeid.TypeIdString) }
+  get_slot(s, t) { $t.gets() }
+  make(t0) { parser.rec.types.typeid.TypeIdString.make($t0) }
+}
+
+%op TypeId TypeIdInteger(i:int) {
+  is_fsym(t) { ($t instanceof parser.rec.types.typeid.TypeIdInteger) }
+  get_slot(i, t) { $t.geti() }
+  make(t0) { parser.rec.types.typeid.TypeIdInteger.make($t0) }
+}
+
+%op TypeId TypeIdNil() {
+  is_fsym(t) { ($t instanceof parser.rec.types.typeid.TypeIdNil) }
+  make() { parser.rec.types.typeid.TypeIdNil.make() }
+}
+
+%op FunctionRecordArray FRAArgList(al:ArgList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FRAArgList) }
+  get_slot(al, t) { $t.getal() }
+  make(t0) { parser.rec.types.functionrecordarray.FRAArgList.make($t0) }
+}
+
+%op FunctionRecordArray FRAFieldList(fl:FieldList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FRAFieldList) }
+  get_slot(fl, t) { $t.getfl() }
+  make(t0) { parser.rec.types.functionrecordarray.FRAFieldList.make($t0) }
+}
+
+%op FunctionRecordArray FRA1(a1:AuxFRA1) {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FRA1) }
+  get_slot(a1, t) { $t.geta1() }
+  make(t0) { parser.rec.types.functionrecordarray.FRA1.make($t0) }
+}
+
+%op FunctionRecordArray FRA2(a2:AuxFRA2) {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FRA2) }
+  get_slot(a2, t) { $t.geta2() }
+  make(t0) { parser.rec.types.functionrecordarray.FRA2.make($t0) }
+}
+
+%op FunctionRecordArray FRA3(a1:AuxFRA1, a2:AuxFRA2) {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FRA3) }
+  get_slot(a1, t) { $t.geta1() }
+  get_slot(a2, t) { $t.geta2() }
+  make(t0, t1) { parser.rec.types.functionrecordarray.FRA3.make($t0, $t1) }
+}
+
+%op FunctionRecordArray FunctionRecordArrayEmpty() {
+  is_fsym(t) { ($t instanceof parser.rec.types.functionrecordarray.FunctionRecordArrayEmpty) }
+  make() { parser.rec.types.functionrecordarray.FunctionRecordArrayEmpty.make() }
+}
+
+%op AuxArgList EmptyAuxArgList() {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxarglist.EmptyAuxArgList) }
+  make() { parser.rec.types.auxarglist.EmptyAuxArgList.make() }
+}
+
+%op AuxArgList ConsAuxArgList(HeadAuxArgList:Exp, TailAuxArgList:AuxArgList) {
+  is_fsym(t) { ($t instanceof parser.rec.types.auxarglist.ConsAuxArgList) }
+  get_slot(HeadAuxArgList, t) { $t.getHeadAuxArgList() }
+  get_slot(TailAuxArgList, t) { $t.getTailAuxArgList() }
+  make(t0, t1) { parser.rec.types.auxarglist.ConsAuxArgList.make($t0, $t1) }
+}
+
+
+%oplist AuxFieldList AuxFieldList(IntFieldList*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.auxfieldlist.ConsAuxFieldList) || ($t instanceof parser.rec.types.auxfieldlist.EmptyAuxFieldList)) }
+  make_empty() { parser.rec.types.auxfieldlist.EmptyAuxFieldList.make() }
+  make_insert(e,l) { parser.rec.types.auxfieldlist.ConsAuxFieldList.make($e,$l) }
+  get_head(l) { $l.getHeadAuxFieldList() }
+  get_tail(l) { $l.getTailAuxFieldList() }
+  is_empty(l) { $l.isEmptyAuxFieldList() }
+}
+
+%oplist DecList DecList(Dec*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.declist.ConsDecList) || ($t instanceof parser.rec.types.declist.EmptyDecList)) }
+  make_empty() { parser.rec.types.declist.EmptyDecList.make() }
+  make_insert(e,l) { parser.rec.types.declist.ConsDecList.make($e,$l) }
+  get_head(l) { $l.getHeadDecList() }
+  get_tail(l) { $l.getTailDecList() }
+  is_empty(l) { $l.isEmptyDecList() }
+}
+
+%oplist Aux4 Aux4(Exp*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.aux4.ConsAux4) || ($t instanceof parser.rec.types.aux4.EmptyAux4)) }
+  make_empty() { parser.rec.types.aux4.EmptyAux4.make() }
+  make_insert(e,l) { parser.rec.types.aux4.ConsAux4.make($e,$l) }
+  get_head(l) { $l.getHeadAux4() }
+  get_tail(l) { $l.getTailAux4() }
+  is_empty(l) { $l.isEmptyAux4() }
+}
+
+%oplist Aux3 Aux3(String*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.aux3.ConsAux3) || ($t instanceof parser.rec.types.aux3.EmptyAux3)) }
+  make_empty() { parser.rec.types.aux3.EmptyAux3.make() }
+  make_insert(e,l) { parser.rec.types.aux3.ConsAux3.make($e,$l) }
+  get_head(l) { $l.getHeadAux3() }
+  get_tail(l) { $l.getTailAux3() }
+  is_empty(l) { $l.isEmptyAux3() }
+}
+
+%oplist AuxExpList AuxExpList(Exp*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.auxexplist.ConsAuxExpList) || ($t instanceof parser.rec.types.auxexplist.EmptyAuxExpList)) }
+  make_empty() { parser.rec.types.auxexplist.EmptyAuxExpList.make() }
+  make_insert(e,l) { parser.rec.types.auxexplist.ConsAuxExpList.make($e,$l) }
+  get_head(l) { $l.getHeadAuxExpList() }
+  get_tail(l) { $l.getTailAuxExpList() }
+  is_empty(l) { $l.isEmptyAuxExpList() }
+}
+
+%oplist AuxArgList AuxArgList(Exp*) {
+  is_fsym(t) { (($t instanceof parser.rec.types.auxarglist.ConsAuxArgList) || ($t instanceof parser.rec.types.auxarglist.EmptyAuxArgList)) }
+  make_empty() { parser.rec.types.auxarglist.EmptyAuxArgList.make() }
+  make_insert(e,l) { parser.rec.types.auxarglist.ConsAuxArgList.make($e,$l) }
+  get_head(l) { $l.getHeadAuxArgList() }
+  get_tail(l) { $l.getTailAuxArgList() }
+  is_empty(l) { $l.isEmptyAuxArgList() }
+}
